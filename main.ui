@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Depresser</class>
+ <widget class="QMainWindow" name="Depresser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="MainWidget">
+   <widget class="QStackedWidget" name="PageObject">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>781</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Shape::NoFrame</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Shadow::Plain</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="main_page">
+     <widget class="QLabel" name="DepresserLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>761</width>
+        <height>351</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 700 72pt &quot;한컴 말랑말랑 Bold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Depresser</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="CompressButton">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>340</y>
+        <width>201</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Zip</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ExtractButton">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>340</y>
+        <width>201</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Unzip</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Unzipper">
+     <widget class="QGroupBox" name="ExtracterSettingGroup">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>761</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Extracter Setting</string>
+      </property>
+      <widget class="QComboBox" name="ExtensionComboBox">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>auto</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.zip</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.tar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.tar.gz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.tar.bz2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.rar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.7z</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="ExtensionLabel">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>40</y>
+         <width>151</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Extension</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="FilePathTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>60</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Unzip file path</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="FindZippedFileButton">
+       <property name="geometry">
+        <rect>
+         <x>390</x>
+         <y>60</y>
+         <width>75</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="PathToUnzipTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>60</y>
+         <width>151</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Path to unzip</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="FindExtractToFolderButton">
+       <property name="geometry">
+        <rect>
+         <x>640</x>
+         <y>60</y>
+         <width>75</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find folder</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="FindZippedFileLabel4">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>40</y>
+         <width>231</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find zipped file</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ExtractToLabel">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>40</y>
+         <width>231</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Extract to</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="ExtractLog">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>280</y>
+        <width>761</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Extracter log</string>
+      </property>
+      <widget class="QTextEdit" name="LogTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>741</width>
+         <height>211</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="ProgressBar">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>741</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="textDirection">
+        <enum>QProgressBar::Direction::TopToBottom</enum>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="ExtracterStyledLabel">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 700 72pt &quot;한컴 말랑말랑 Bold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Unzipper</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Zipper">
+     <widget class="QGroupBox" name="ZipperSettingGroup">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>761</width>
+        <height>181</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Zipper Setting</string>
+      </property>
+      <widget class="QComboBox" name="ExtensionComboBox_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>60</y>
+         <width>151</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <item>
+        <property name="text">
+         <string>auto</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.zip</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.tar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.tar.gz</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.tar.bz2</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.rar</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>.7z</string>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="ExtensionLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>40</y>
+         <width>151</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Extension</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="FilePathTextEdit_2">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>60</y>
+         <width>431</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Unzip file path (seperated by &quot;, &quot;)</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="FindFilesButton">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>60</y>
+         <width>75</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find</string>
+       </property>
+      </widget>
+      <widget class="QTextEdit" name="PathToZipTextEdit">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>140</y>
+         <width>611</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="placeholderText">
+        <string>Path to unzip</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="FindZipToFolderButton">
+       <property name="geometry">
+        <rect>
+         <x>670</x>
+         <y>140</y>
+         <width>75</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find folder</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="FindFilesLabel">
+       <property name="geometry">
+        <rect>
+         <x>230</x>
+         <y>40</y>
+         <width>231</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Find files for zip</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="ExtractToLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>50</x>
+         <y>120</y>
+         <width>691</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Zip to</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="ExtracterStyledLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 700 72pt &quot;한컴 말랑말랑 Bold&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Zipper</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignmentFlag::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="ZipperLogGroup">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>340</y>
+        <width>761</width>
+        <height>221</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Zipper log</string>
+      </property>
+      <widget class="QTextEdit" name="ZipperLogText">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>741</width>
+         <height>211</height>
+        </rect>
+       </property>
+      </widget>
+      <widget class="QProgressBar" name="ZipProgressBar">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>741</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Orientation::Vertical</enum>
+       </property>
+       <property name="invertedAppearance">
+        <bool>false</bool>
+       </property>
+       <property name="textDirection">
+        <enum>QProgressBar::Direction::TopToBottom</enum>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
